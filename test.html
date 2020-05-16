@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <title>node-split test</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .box {
+        border: thin solid red;
+        color: red;
+      }
+
+      .js-empty-list {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Onband beadurune (wæs him Beowulfes sið, modges merefaran, micel æfþunca,
+      forþon þe he ne uþe þæt ænig oðer man æfre mærða þon ma middangeardes
+      gehedde under heofenum þonne he sylfa): "Eart þu se Beowulf, se þe wið
+      Brecan wunne, on sidne sæ ymb sund flite, ðær git for wlence wada cunnedon
+      ond for dolgilpe on deop wæter aldrum neþdon? Ne inc ænig mon. Ne leof ne
+      lað, belean mihte sorhfullne sið, þa git on sund reon. Þær git eagorstream
+      earmum þehton, mæton merestræta, mundum brugdon, glidon ofer garsecg;
+      geofon yþum weol, wintrys wylmum. Git on wæteres æht seofon niht swuncon;
+      he þe æt sunde oferflat, hæfde mare mægen. Þa hine on morgentid on
+      Heaþoræmas holm up ætbær; ðonon he gesohte swæsne eðel.
+    </p>
+
+    <p class="box dont-split-here">
+      Heorogar ond Hroðgar ond Halga til; hyrde ic þæt wæs Onelan cwen,
+      Heaðoscilfingas healsgebedda. Þa wæs Hroðgare heresped gyfen, wiges
+      weorðmynd, þæt him his winemagas georne hyrdon, oðð þæt seo geogoð geweox,
+      magodriht micel. Him on mod bearn þæt healreced hatan wolde, medoærn
+      micel, men gewyrcean þonne yldo bearn æfre gefrunon.
+    </p>
+
+    <p>
+      Leof his leodum, lond Brondinga, freoðoburh fægere, þær he folc ahte, burh
+      ond beagas. Beot eal wið þe sunu Beanstanes soðe gelæste. Ðonne wene ic to
+      þe wyrsan geþingea, ðeah þu heaðoræsa gehwær dohte, grimre guðe, gif þu
+      Grendles dearst nihtlongne fyrst nean bidan." Beowulf maþelode, bearn
+      Ecgþeowes: "Hwæt! Þu worn fela, wine min Unferð. Beore druncen ymb Brecan
+      spræce, sægdest from his siðe. Soð ic talige, þæt ic merestrengo maran
+      ahte, earfeþo on yþum, ðonne ænig oþer man. Wit þæt gecwædon cnihtwesende
+      ond gebeotedon (wæron begen þa git on geogoðfeore) þæt wit on garsecg ut
+      aldrum neðdon, ond þæt geæfndon swa. Hæfdon swurd nacod, þa wit on sund
+      reon, heard on handa; wit unc wið hronfixas.
+    </p>
+
+    <ul id="1">
+      <li id="1-1">Werian þohton.</li>
+      <li id="1-2">
+        No he wiht fram me flodyþum feor fleotan meahte, hraþor on holme;
+      </li>
+      <li id="1-3">no ic fram him wolde.</li>
+      <li id="1-4">
+        Ða wit ætsomne on sæ wæron fif nihta fyrst,
+        <ul>
+          <li id="1-4-1">þþæt unc flod todraf,</li>
+          <li id="1-4-2">wado weallende,</li>
+          <li id="1-4-3">
+            wedera cealdost,
+            <p class="box split-here">
+              Gewiton him þa feran. Flota stille bad, seomode on sale sidfæþmed
+              scip, on ancre fæst. Eoforlic scionon ofer hleorberan gehroden
+              golde, fah ond fyrheard; ferhwearde heold guþmod grimmon. Guman
+              onetton, sigon ætsomne, oþþæt hy sæl timbred, geatolic ond
+              goldfah, ongyton mihton; þæt wæs foremærost foldbuendum receda
+              under roderum, on þæm se rica bad.
+            </p>
+          </li>
+          <li id="1-4-4">nipende niht,</li>
+          <li id="1-4-5">ond norþanwind heaðogrim ondhwearf;</li>
+        </ul>
+      </li>
+
+      <li id="1-5">hreo wæron yþa.</li>
+      <li id="1-6">Wæs merefixa mod onhrered;</li>
+      <li id="1-7">þær me wið laðum licsyrce min.</li>
+      <li id="1-8">
+        Heard,
+        <p class="box split-here">
+          Healðegnes hete; heold hyne syðþan fyr ond fæstor se þæm feonde
+          ætwand. Swa rixode ond wið rihte wan, ana wið eallum, oðþæt idel stod
+          husa selest. Wæs seo hwil micel; twelf wintra tid torn geþolode wine
+          Scyldinga, weana gehwelcne, sidra sorga. Forðam secgum wearð, ylda
+          bearnum, undyrne cuð.
+        </p>
+      </li>
+      <li id="1-9">hondlocen,</li>
+      <li id="1-10">helpe gefremede,</li>
+      <li id="1-11">beadohrægl broden on breostum læg golde gegyrwed.</li>
+      <li id="1-12">Me to grunde teah fah feondscaða,</li>
+      <li id="1-13">fæste hæfde grim on grape;</li>
+      <li id="1-14">hwæþre me gyfeþe wearð þæt ic aglæcan orde geræhte,</li>
+      <li id="1-15">hildebille;</li>
+      <li id="1-16">heaþoræs fornam mihtig meredeor þurh mine hand.</li>
+      <li id="1-17">Swa mec gelome laðgeteonan þreatedon þearle.</li>
+      <li id="1-18">Ic him þenode.</li>
+    </ul>
+
+    <section>
+      <h2>Section</h2>
+      <p>
+        Deoran sweorde, swa hit gedefe wæs. Næs hie ðære fylle gefean hæfdon,
+        manfordædlan, þæt hie me þegon, symbel ymbsæton sægrunde neah; ac on
+        mergenne mecum wunde be yðlafe uppe lægon, sweordum aswefede, þæt syðþan
+        na ymb brontne ford brimliðende lade ne letton. Leoht eastan com, beorht
+        beacen godes; brimu swaþredon. Þæt ic sænæssas geseon mihte, windige
+        weallas. Wyrd oft nereð unfægne eorl, þonne his ellen deah. Hwæþere me
+        gesælde þæt ic mid sweorde ofsloh niceras nigene. No ic on niht gefrægn
+        under heofones hwealf heardran feohtan, ne on egstreamum earmran mannon;
+        hwaþere ic fara feng feore gedigde, siþes werig. Ða mec sæ oþbær, flod
+        æfter faroðe on Finna land.
+      </p>
+
+      <p class="box split-here">
+        Healðegnes hete; heold hyne syðþan fyr ond fæstor se þæm feonde ætwand.
+        Swa rixode ond wið rihte wan, ana wið eallum, oðþæt idel stod husa
+        selest. Wæs seo hwil micel; twelf wintra tid torn geþolode wine
+        Scyldinga, weana gehwelcne, sidra sorga. Forðam secgum wearð, ylda
+        bearnum, undyrne cuð.
+      </p>
+    </section>
+
+    <p>
+      Wadu weallendu. No ic wiht fram þe swylcra searoniða secgan hyrde, billa
+      brogan. Breca næfre git æt heaðolace, ne gehwæþer incer, swa deorlice dæd
+      gefremede fagum sweordum (no ic þæs fela gylpe), þeah ðu þinum broðrum to
+      banan wurde, heafodmægum; þæs þu in helle scealt werhðo dreogan, þeah þin
+      wit duge. Secge ic þe to soðe, sunu Ecglafes.
+    </p>
+    <script src="/node-split.js"></script>
+    <script>
+      console.log(
+        `Function should throw the error: "You must provide a string to use as a query selector:"`
+      );
+      nodeSplit();
+
+      console.log(
+        `Function should return the warning: "No nodes matching '.not-here' found":`
+      );
+      nodeSplit('.not-here');
+
+      console.log(
+        `Function should return: "3 nodes matching '.split-here' found — 2 split.":`
+      );
+      nodeSplit('.split-here');
+
+      listCorrector();
+    </script>
+  </body>
+</html>
